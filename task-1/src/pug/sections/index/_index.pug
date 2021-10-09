@@ -1,3 +1,19 @@
-include ./../../mixins/_custom-checkbox
+- var logotypes = ["12Storeez", "FinnFlare", "FrenchConnection", "KarenMillen", "MintVelvet", "Nike"]
 
-//include ./../components/hero/_hero
+section.logotypes
+    .container
+        h2 Our partners
+    .logotypes__content
+        .container.logotypes__container
+            ul.logotypes__list
+                each logo in logotypes
+                    li.logotypes__item
+                        a(href="#")
+                            +svg(logo)
+    .logotypes__content
+        .container.logotypes__container
+            ul.logotypes__list.logotypes__list--centered
+                each logo in logotypes
+                    li.logotypes__item.logotypes__item--centered
+                        a(href="#")
+                            +svg(logo)

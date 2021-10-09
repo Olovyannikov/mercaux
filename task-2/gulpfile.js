@@ -40,9 +40,7 @@ const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const del = require('del');
-const fileInclude = require('gulp-file-include');
 const gulpif = require('gulp-if');
-const htmlmin = require('gulp-htmlmin');
 const image = require('gulp-image');
 const notify = require('gulp-notify');
 const plumber = require("gulp-plumber");
@@ -52,13 +50,12 @@ const revDel = require('gulp-rev-delete-original');
 const revRewrite = require('gulp-rev-rewrite');
 const rename = require("gulp-rename");
 const sass = require('gulp-sass');
-const smartGrid = require("smart-grid");
 const sourcemaps = require('gulp-sourcemaps');
 const svgSprite = require('gulp-svg-sprite');
 const {readFileSync} = require('fs');
+const webp = require('gulp-webp');
 
 let isProd = false; // dev by default
-let isGrid = false; // smartgrid or not
 
 const clean = () => {
     return del(path.clean)
@@ -75,6 +72,11 @@ const svgSprites = () => {
             },
         }))
         .pipe(dest(path.build.img));
+}
+
+const fonts = () => {
+    return src(source_folder + '/fonts/**')
+        .pipe(dest(path.build.fonts))
 }
 
 const styles = () => {
@@ -98,6 +100,8 @@ const styles = () => {
 
 const images = () => {
     return src(path.src.img)
+        .pipe(dest(path.build.img))
+        .pipe(webp())
         .pipe(gulpif(isProd, image()))
         .pipe(dest(path.build.img))
 };
@@ -167,10 +171,10 @@ const toProd = (done) => {
     done();
 };
 
-exports.default = series(clean, pug2html, styles, images, svgSprites, watchFiles);
+exports.default = series(clean, pug2html, fonts, styles, images, svgSprites, watchFiles);
 
-exports.build = series(toProd, clean, pug2html, styles, images, svgSprites);
+exports.build = series(toProd, clean, pug2html, fonts, styles, images, svgSprites);
 
 exports.cache = series(cache, rewrite);
 
-exports.backend = series(toProd, clean, pug2html, images, svgSprites);
+exports.backend = series(toProd, clean, pug2html, fonts, images, svgSprites);

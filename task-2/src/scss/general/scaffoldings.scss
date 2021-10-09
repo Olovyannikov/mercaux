@@ -9,12 +9,12 @@ html {
 }
 
 body {
-  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Intro", "Arial", sans-serif;
-  background-color: var(--color-white);
+  margin: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: #f2f2f2;
 }
 
 img {

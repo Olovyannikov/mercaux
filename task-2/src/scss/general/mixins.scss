@@ -18,12 +18,22 @@
 
 @mixin list-reset {
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 @function rem-calc($size) {
   $remSize: $size / 16;
 
   @return #{$remSize}rem;
+}
+
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    src: url("../fonts/#{$url}.woff2") format("woff2");
+    font-family: "#{$font-family}";
+    font-weight: #{$weight};
+    font-style: $style;
+    font-display: swap;
+  }
 }

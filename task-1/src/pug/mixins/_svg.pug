@@ -1,0 +1,6 @@
+mixin svg(path, width, height)
+    -isWidth = width
+    -isHeight = height
+
+    svg(id=path+'-icon' width=width height=height)
+        use(href=`img/sprite.svg#` + path)

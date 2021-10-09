@@ -26,6 +26,6 @@ section.layout
                 article.layout__article.article
                     p.article__text #{article.text}
                     picture
-                        source(srcset="./img/#{article.id}.webp" type="image/webp")
-                        img(src="./img/#{article.id}.png" alt="Article image about feature" aria-hidden="true")
+                        source(srcset="./img/" + article.id + ".webp" type="image/webp")
+                        img(src="./img/" + article.id + ".png" alt="Article image about feature" aria-hidden="true")
 
