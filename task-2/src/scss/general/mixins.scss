@@ -1,0 +1,29 @@
+@mixin sm-block {
+  @media (min-width: (400px)) {
+    @content;
+  }
+}
+
+@mixin md-block {
+  @media (min-width: (600px)) {
+    @content;
+  }
+}
+
+@mixin lg-block {
+  @media (min-width: (700px)) {
+    @content;
+  }
+}
+
+@mixin list-reset {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@function rem-calc($size) {
+  $remSize: $size / 16;
+
+  @return #{$remSize}rem;
+}

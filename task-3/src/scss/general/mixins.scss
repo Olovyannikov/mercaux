@@ -1,0 +1,39 @@
+@mixin sm-block {
+  @media (min-width: (400px)) {
+    @content;
+  }
+}
+
+@mixin md-block {
+  @media (min-width: (600px)) {
+    @content;
+  }
+}
+
+@mixin lg-block {
+  @media (min-width: (700px)) {
+    @content;
+  }
+}
+
+@mixin list-reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@function rem-calc($size) {
+  $remSize: $size / 16;
+
+  @return #{$remSize}rem;
+}
+
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    src: url("../fonts/#{$url}.woff2") format("woff2");
+    font-family: "#{$font-family}";
+    font-weight: #{$weight};
+    font-style: $style;
+    font-display: swap;
+  }
+}
