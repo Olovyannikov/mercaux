@@ -13,3 +13,6 @@
    * CSS Flex
 3. [Task 3](https://olovyannikov.github.io/mercaux/task-3/build)
    * Сверстать Task 2 без использования Flex / Grid
+4. [Task 4](https://olovyannikov.github.io/mercaux/task-4/build)
+   * Слайдер из 4-ех элементов + текст
+   * Pure (Vanilla) JS
