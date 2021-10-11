@@ -1,7 +1,6 @@
 .submenu {
   &__item {
     color: currentColor;
-    transition: 0.5s ease-in-out;
     a {
       color: currentColor;
       display: block;
@@ -10,12 +9,20 @@
 
       &:hover {
         color: #fff;
-        background-color: lightgrey;
+        background-color: #d2d2f5;;
       }
     }
 
     &:not(:last-child) a {
       border-bottom: 1px solid lightgrey;
     }
+  }
+
+  &.active {
+    top: 100%;
+    opacity: 1;
+    width: 100%;
+    pointer-events: all;
+    visibility: visible;
   }
 }

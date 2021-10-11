@@ -7,8 +7,9 @@
   align-items: center;
   min-height: rem-calc(50);
   color: #000;
-  background-color: rgba(#fff, 0.25);
+  background-color: rgba(#fff, 1);
   transition: 0.5s ease-in-out;
+  z-index: 2;
 
   &.out {
     min-height: rem-calc(30);
@@ -21,7 +22,7 @@
     }
 
     li {
-      padding: rem-calc(6) 0;
+      padding: rem-calc(6) rem-calc(12);
     }
 
     button {

@@ -3,5 +3,17 @@
     width: 30%;
     height: auto;
     transition: 0.5s ease-in-out;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    margin-right: 10px;
+
+    svg {
+      max-width: 100px;
+    }
   }
 }

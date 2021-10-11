@@ -16,6 +16,23 @@ body {
   min-height: 100%;
   font-family: "Roboto", "Arial", sans-serif;
   background-color: #d2d2f5;
+
+  &.overlay {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: transparent;
+      width: 100vw;
+      height: 100vh;
+      z-index: 123;
+    }
+  }
 }
 
 main {
