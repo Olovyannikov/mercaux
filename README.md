@@ -16,3 +16,5 @@
 4. [Task 4](https://olovyannikov.github.io/mercaux/task-4/build)
    * Слайдер из 4-ех элементов + текст
    * Pure (Vanilla) JS
+5. [Task 5](https://olovyannikov.github.io/mercaux/task-5/build)
+   * Header -> фиксированный сверху, при скролле анимация высоты + дропдаун меню

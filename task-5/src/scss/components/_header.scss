@@ -1,0 +1,41 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: rem-calc(50);
+  color: #000;
+  background-color: rgba(#fff, 0.25);
+  transition: 0.5s ease-in-out;
+
+  &.out {
+    min-height: rem-calc(30);
+    color: #fff;
+    background-color: rgba(#000, 0.25);
+    transition: 0.5s ease-in-out;
+
+    svg {
+      width: 20%;
+    }
+
+    li {
+      padding: rem-calc(6) 0;
+    }
+
+    button {
+      font-size: rem-calc(14);
+    }
+
+    a {
+      color: #000;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

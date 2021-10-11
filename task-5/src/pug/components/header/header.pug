@@ -1,0 +1,20 @@
+header.js-header.header
+    .container.header__container
+        .header__logo.logo
+            +svg("Nike", 200, 70)
+        nav.header__navigation.navigation
+            ul.navigation__list
+                li.navigation__item
+                    button(aria-label="Открыть подменю").navigation__button.js-menu-trigger Menu Item 1
+                    ul.navigation__submenu.submenu
+                        li.submenu__item
+                            a(href="#").submenu__link Menu Sub 1
+                        li.submenu__item
+                            a(href="#").submenu__link Menu Sub 2
+                        li.submenu__item
+                            a(href="#").submenu__link Menu Sub 3
+                li.navigation__item
+                    button(aria-label="Открыть подменю").navigation__button.js-menu-trigger Menu Item 2
+                    ul.navigation__submenu.submenu
+                        li.submenu__item
+                            a(href="#").submenu__link Menu Sub 2

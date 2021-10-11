@@ -1,0 +1,18 @@
+@import "vendor/normalize";
+@import "general/mixins";
+@import "general/fonts";
+@import "general/scaffoldings";
+
+// components
+
+@import "components/header";
+@import "components/footer";
+@import "components/logo";
+@import "components/navigation";
+@import "components/submenu";
+
+.content {
+  p {
+    font-size: rem-calc(24);
+  }
+}

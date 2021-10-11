@@ -111,13 +111,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ "./src/js/modules/swiper.module.js":
 /*!*****************************************!*\
-  !*** ./src/js/modules/swiper.module.js ***!
+  !*** ./src/js/modules/header.module.js ***!
   \*****************************************/
 /*! exports provided: swiper */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"swiper\", function() { return swiper; });\n/* harmony import */ var swiper_swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/swiper-bundle */ \"./node_modules/swiper/swiper-bundle.js\");\n/* harmony import */ var swiper_swiper_bundle__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(swiper_swiper_bundle__WEBPACK_IMPORTED_MODULE_0__);\n\nvar swiper = function swiper() {\n  var swiper = new swiper_swiper_bundle__WEBPACK_IMPORTED_MODULE_0___default.a('.swiper', {\n    navigation: {\n      prevEl: '.layout__prev',\n      nextEl: '.layout__next'\n    },\n    loop: true,\n    autoplay: {\n      delay: 2000,\n      disableOnInteraction: false\n    },\n    spaceBetween: 32,\n    effect: 'fade',\n    slidesPerView: 1\n  });\n};\n\n//# sourceURL=webpack:///./src/js/modules/swiper.module.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"swiper\", function() { return swiper; });\n/* harmony import */ var swiper_swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/swiper-bundle */ \"./node_modules/swiper/swiper-bundle.js\");\n/* harmony import */ var swiper_swiper_bundle__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(swiper_swiper_bundle__WEBPACK_IMPORTED_MODULE_0__);\n\nvar swiper = function swiper() {\n  var swiper = new swiper_swiper_bundle__WEBPACK_IMPORTED_MODULE_0___default.a('.swiper', {\n    navigation: {\n      prevEl: '.layout__prev',\n      nextEl: '.layout__next'\n    },\n    loop: true,\n    autoplay: {\n      delay: 2000,\n      disableOnInteraction: false\n    },\n    spaceBetween: 32,\n    effect: 'fade',\n    slidesPerView: 1\n  });\n};\n\n//# sourceURL=webpack:///./src/js/modules/header.module.js?");
 
 /***/ }),
 
@@ -129,7 +129,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_swiper_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/swiper.module */ \"./src/js/modules/swiper.module.js\");\n/* harmony import */ var _modules_slider_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider.module */ \"./src/js/modules/slider.module.js\");\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_swiper_module__WEBPACK_IMPORTED_MODULE_0__[\"swiper\"])();\n  Object(_modules_slider_module__WEBPACK_IMPORTED_MODULE_1__[\"slider\"])();\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_swiper_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/swiper.module */ \"./src/js/modules/header.module.js\");\n/* harmony import */ var _modules_slider_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider.module */ \"./src/js/modules/slider.module.js\");\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_swiper_module__WEBPACK_IMPORTED_MODULE_0__[\"swiper\"])();\n  Object(_modules_slider_module__WEBPACK_IMPORTED_MODULE_1__[\"slider\"])();\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ })
 
