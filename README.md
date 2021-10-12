@@ -18,3 +18,7 @@
    * Pure (Vanilla) JS
 5. [Task 5](https://olovyannikov.github.io/mercaux/task-5/build)
    * Header -> фиксированный сверху, при скролле анимация высоты + дропдаун меню
+6. [Task 6](https://olovyannikov.github.io/mercaux/task-5/build)
+   * см. Task 5
+7. [Task 7](https://olovyannikov.github.io/mercaux/task-7/build)
+   * Плавный скролл по якорям

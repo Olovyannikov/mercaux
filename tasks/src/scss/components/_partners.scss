@@ -1,0 +1,117 @@
+.partners {
+  &__title {
+    @include md-block {
+      text-align: left;
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin-bottom: rem-calc(40);
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #9f9f9f;
+    }
+
+    &::before {
+      top: 0;
+      bottom: unset;
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include sm-block {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include md-block {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include lg-block {
+      grid-auto-flow: column;
+      grid-template-columns: auto;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.2;
+    transition: 0.3s ease-in-out;
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 25px;
+        height: 1px;
+        background-color: #9f9f9f;
+
+        @include sm-block {
+          right: -10px;
+          bottom: unset;
+          width: 1px;
+          height: 25px;
+        }
+      }
+    }
+
+    svg {
+      width: 90px;
+      height: 90px;
+    }
+
+    &:hover {
+      opacity: 1;
+
+      &::after {
+        background-color: rgba(#9f9f9f, 0.2);
+      }
+    }
+
+    @include sm-block {
+      &:nth-child(2n) {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    @include md-block {
+      &:nth-child(2n) {
+        &::after {
+          display: block;
+        }
+      }
+
+      &:nth-child(3n) {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    @include lg-block {
+      &:nth-child(3n) {
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+}

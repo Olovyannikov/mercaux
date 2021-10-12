@@ -1,0 +1,10 @@
+- var logotypes = ["12Storeez", "FinnFlare", "FrenchConnection", "KarenMillen", "MintVelvet", "Nike"]
+
+section.partners
+    .container.partners__container
+        h2.partners__title.title Task 1 - Logotypes
+            ul.partners__list
+                each logo in logotypes
+                    li.partners__item
+                        a(href="#")
+                            +svg(logo)

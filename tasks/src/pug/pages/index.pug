@@ -1,0 +1,10 @@
+extends ../templates/main-layout
+include ../mixins/_svg
+
+block variables
+    - const title = 'Главная'
+
+block content
+    include ../sections/index/_partners
+    include ../sections/index/_articles
+    include ../sections/index/_slider
