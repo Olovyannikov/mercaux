@@ -2,19 +2,19 @@
   &__list {
     display: grid;
     grid-auto-flow: column;
-    gap: rem-calc(5) rem-calc(10);
+    gap: rem-calc(5) 0;
   }
 
   &__item {
     position: relative;
-    padding: 1rem rem-calc(30) ;
+    padding: 1rem rem-calc(30);
     color: inherit;
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
 
     &:hover {
       background-color: #d2d2f5;
 
-      button {
+      span {
         color: #fff;
       }
 
@@ -32,7 +32,6 @@
   &__button {
     @include btn-reset;
 
-    color: currentColor;
     transition: 0.3s ease-in-out;
   }
 
@@ -47,7 +46,7 @@
     pointer-events: none;
     border-bottom-right-radius: rem-calc(12);
     border-bottom-left-radius: rem-calc(12);
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
     z-index: -1;
   }
 
@@ -56,7 +55,7 @@
   }
 }
 
-.header.out a {
+.header.out .navigation__button {
   font-size: rem-calc(14);
   color: #fff !important;
 }

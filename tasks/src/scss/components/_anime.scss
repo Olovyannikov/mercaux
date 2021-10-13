@@ -1,0 +1,21 @@
+.anime {
+  &__slider {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  &__content {
+    &--slides {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: 100%;
+  }
+}

@@ -28,16 +28,20 @@ body {
       right: 0;
       top: 0;
       bottom: 0;
-      z-index: 123;
+      z-index: 1;
       width: 100vw;
       height: 100vh;
-      background-color: transparent;
+      background-color: rgba(#000, 0.25);
     }
   }
 }
 
 main {
   flex: 1 0 auto;
+  margin-top: 25px;
+}
+
+section {
   padding-top: 50px;
 }
 
@@ -84,7 +88,16 @@ a {
   gap: rem-calc(20);
 }
 
-ul, ol {
+ul,
+ol {
   @include list-reset;
 }
 
+picture {
+  display: block;
+  font-size: 0;
+}
+
+.hidden {
+  display: none !important;
+}

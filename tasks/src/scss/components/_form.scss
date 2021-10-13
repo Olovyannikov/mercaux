@@ -1,0 +1,155 @@
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+.form {
+  z-index: 100;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  padding: 30px 40px;
+  padding-top: 50px;
+  transition: 0.3s ease-in-out;
+
+  &__control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &.success input, &.success textarea {
+      border-color: var(--success-color);
+    }
+
+    &.error input, &.error textarea {
+      border-color: var(--error-color);
+    }
+
+    &.error small {
+      visibility: visible;
+    }
+
+    &.success small {
+      visibility: visible;
+    }
+  }
+
+  small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+
+    &.success {
+      color: var(--success-color);
+    }
+  }
+
+  label {
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input, textarea {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+
+    &:focus {
+      outline: 0;
+      border-color: #777;
+    }
+  }
+
+  &__submit {
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    color: #fff;
+    background: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__close {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    z-index: 101;
+    top: 8px;
+    right: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 22%;
+      top: 50%;
+      width: 60%;
+      height: 2px;
+      background-color: #000;
+      transform: rotate(45deg);
+      border-radius: 12px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      background-color: #9d9d9d;
+
+      &::after,
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .modal--visible & {
+    top: 50%;
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.form-section {
+  margin-bottom: 100px;
+}
+
+.form-section__button {
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: auto;
+  color: #fff;
+  background: #db4234;
+  border: 2px solid #db4234;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal {
+
+}

@@ -1,0 +1,29 @@
+section.form-section
+    .form-section.container
+        h2.title.form-section__title Task 12 - Form
+        button(type="button").form-section__button.modal__trigger Open Modal Window
+.modal(data-modal)
+    form.modal__form.form#form
+        button.form__close(aria-label="Закрыть модальное окно" type="button")
+        .form__control
+            label
+                input#username(placeholder="Enter username" data-validate)
+            small Error message
+        .form__control
+            label
+                input#email(placeholder="Enter email" data-validate)
+            small Error message
+        .form__control
+            label
+                input#password(type="password" placeholder="Enter password" data-validate)
+            small Error message
+        .form__control
+            label
+                input#confirm(type="password" placeholder="Enter password again" data-validate)
+            small Error message
+        .form__control
+            label
+                textarea#text(placeholder="Enter message" data-validate)
+            small Error message
+        button.form__submit Submit
+

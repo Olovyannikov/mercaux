@@ -17,8 +17,14 @@
         </div>
         <nav class="header__navigation navigation">
           <ul class="navigation__list">
-            <li class="navigation__item"><a class="submenu__link" href="#two">CSS Scroll</a></li>
-            <li class="navigation__item"><a class="navigation__button" href="#three">JS-scroll</a></li>
+            <li class="navigation__item"><a class="navigation__button">Task 7 - CSS Scroll</a>
+              <ul class="navigation__submenu submenu">
+                <li class="submenu__item"><a href="#task-3">Task 3</a></li>
+                <li class="submenu__item"><a href="#task-4">Task 4</a></li>
+                <li class="submenu__item"><a href="#task-8">Task 8</a></li>
+              </ul>
+            </li>
+            <li class="navigation__item"><a class="navigation__button" href="#task-9">Task 7 - JS-scroll</a></li>
           </ul>
         </nav>
       </div>
@@ -87,7 +93,7 @@
           </div>
         </div>
       </section>
-      <section class="articles--old">
+      <section class="articles--old" id="task-3">
         <div class="container">
           <h2 class="title articles__title">Task 3 - Articles without flex / grid</h2>
           <div class="articles__content">
@@ -118,7 +124,7 @@
           </div>
         </div>
       </section>
-      <section class="slider">
+      <section class="slider" id="task-4">
         <div class="container slider__container">
           <h2 class="title slider__title">Task 4 - slider (using native js lib - swiper.js)</h2>
           <div class="slider__controls">
@@ -163,6 +169,82 @@
           </div>
         </div>
       </section>
+      <section class="map" id="task-8">
+        <div class="container map__container">
+          <h2 class="map__title">Task 8 - Google Map</h2>
+        </div>
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.3324939958272!2d37.56745510383847!3d55.76432164178464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a2db783862d%3A0x20398d4463b79f83!2z0KHRgtC-0LvRj9GA0L3Ri9C5INC_0LXRgC4sIDMg0LrQvtGA0L_Rg9GBIDEzLCDQnNC-0YHQutCy0LAsIDEyMzAyMg!5e0!3m2!1sru!2sru!4v1634114394705!5m2!1sru!2sru" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </section>
+      <section class="image" id="task-9">
+        <div class="image__container container">
+          <h2 class="image__title title">Task 9 - Adaptive Image</h2>
+        </div>
+        <div class="image__pic">
+          <div class="image__pic-container container">
+            <h3>Some content on this image</h3>
+          </div>
+        </div>
+      </section>
+      <section class="filter">
+        <div class="container filter__container">
+          <h2 class="filter__title title">Task 10 - Black image to Aqua image</h2><img class="filter__image" src="./img/logo-ff.png" aria-hidden="true" alt="hidden"/>
+        </div>
+      </section>
+      <section class="anime">
+        <div class="anime__container container">
+          <h2 class="anime__title title">Task 11 - Anime.js</h2>
+          <div class="anime__slider">
+            <div class="anime__content anime__content--slides">
+              <div class="anime__item anime__item--1"><img src="./img/screen-1.jpg"/></div>
+              <div class="anime__item anime__item--2"><img src="./img/screen-2.jpg"/></div>
+              <div class="anime__item anime__item--3"><img src="./img/screen-3.jpg"/></div>
+              <!--.anime__layer.anime__layer--1-->
+              <!--    img(src="./img/layer-1.png")-->
+              <!--.anime__layer.anime__layer--2-->
+              <!--    img(src="./img/layer-2.png")-->
+              <!--.anime__layer.anime__layer--3-->
+              <!--    img(src="./img/layer-3.jpg")-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="form-section">
+        <div class="form-section container">
+          <h2 class="title form-section__title">Task 12 - Form</h2>
+          <button class="form-section__button modal__trigger" type="button">Open Modal Window</button>
+        </div>
+      </section>
+      <div class="modal" data-modal="data-modal">
+        <form class="modal__form form" id="form">
+          <button class="form__close" aria-label="Закрыть модальное окно" type="button"></button>
+          <div class="form__control">
+            <label>
+              <input id="username" placeholder="Enter username" data-validate="data-validate"/>
+            </label><small>Error message</small>
+          </div>
+          <div class="form__control">
+            <label>
+              <input id="email" placeholder="Enter email" data-validate="data-validate"/>
+            </label><small>Error message</small>
+          </div>
+          <div class="form__control">
+            <label>
+              <input id="password" type="password" placeholder="Enter password" data-validate="data-validate"/>
+            </label><small>Error message</small>
+          </div>
+          <div class="form__control">
+            <label>
+              <input id="confirm" type="password" placeholder="Enter password again" data-validate="data-validate"/>
+            </label><small>Error message</small>
+          </div>
+          <div class="form__control">
+            <label>
+              <textarea id="text" placeholder="Enter message" data-validate="data-validate"></textarea>
+            </label><small>Error message</small>
+          </div>
+          <button class="form__submit">Submit</button>
+        </form>
+      </div>
     </main>
     <footer class="footer">
       <div class="container">
