@@ -763,12 +763,93 @@ picture {
   margin: 0 auto;
   width: 80%; }
 
-.anime__content--slides {
-  display: flex;
-  margin: 0 auto; }
+.anime__content {
+  position: relative; }
+  .anime__content--slides {
+    display: flex;
+    margin: 0 auto; }
 
 .anime__item {
+  position: relative;
   flex-shrink: 0;
   width: 100%; }
+  .anime__item--sub {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; }
+  .anime__item .circle {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 1;
+    border: 0 solid #00b19d;
+    font-size: 14px;
+    border-radius: 50%;
+    -webkit-animation-name: circles;
+    animation-name: circles; }
+  .anime__item:first-child .circle {
+    bottom: 15px;
+    right: 120px;
+    -webkit-animation-name: circles;
+    animation-name: circles;
+    -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s; }
+  .anime__item:nth-child(2) .circle {
+    right: unset;
+    left: 30px;
+    bottom: unset;
+    top: 170px;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s; }
+
+.anime__layer {
+  position: absolute;
+  bottom: -200%;
+  left: 50%;
+  transform: translateX(-50%); }
+  .anime__layer--1 {
+    width: 55%; }
+    .anime__layer--1::after {
+      content: "";
+      position: absolute;
+      top: -10.2vh;
+      left: -15vw;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.25);
+      z-index: -1; }
+
+@-webkit-keyframes circles {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    border-width: 0; }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    border-width: 5px; } }
+
+@keyframes circles {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    border-width: 0; }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    border-width: 5px; } }
 
 /*# sourceMappingURL=style.min.css.map */

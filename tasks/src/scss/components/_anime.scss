@@ -8,6 +8,8 @@
   }
 
   &__content {
+    position: relative;
+
     &--slides {
       display: flex;
       margin: 0 auto;
@@ -15,7 +17,93 @@
   }
 
   &__item {
+    position: relative;
     flex-shrink: 0;
     width: 100%;
+
+    &--sub {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    .circle {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 1;
+      border: 0 solid #00b19d;
+      font-size: 14px;
+      border-radius: 50%;
+      animation-name: circles ;
+    }
+
+    &:first-child {
+      .circle {
+        bottom: 15px;
+        right: 120px;
+        animation-name: circles ;
+        animation-duration: 1.2s;
+        animation-delay: 2s;
+      }
+    }
+
+    &:nth-child(2) {
+      .circle {
+        right: unset;
+        left: 30px;
+        bottom: unset;
+        top: 170px;
+        animation-duration: 2s;
+        animation-delay: 4s;
+      }
+    }
+
+    &:last-child {
+      .circle {}
+    }
+  }
+
+  &__layer {
+    position: absolute;
+    bottom: -200%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &--1 {
+      width: 55%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -10.2vh;
+        left: -15vw;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(#000, 0.25);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@keyframes circles {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    border-width: 0;
+  }
+
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    border-width: 5px;
   }
 }

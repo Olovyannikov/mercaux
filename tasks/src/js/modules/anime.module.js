@@ -2,23 +2,27 @@ import anime from 'animejs/lib/anime.es.js';
 
 export const animeModule = () => {
     const items = document.querySelector('.anime__content--slides');
-    let translate = 100;
+    const sub = document.querySelector('.anime__item--sub');
+    const layer1 = document.querySelector('.anime__layer--1');
+    const layer2 = document.querySelector('.anime__layer--2');
+    const layer3 = document.querySelector('.anime__layer--3');
 
-    const a = () => {
-        anime(
-            {
-                targets: items,
-                translateX: `-${translate}%`,
-                easing: "easeInOutQuint",
-                duration: 5000,
-                complete: function(a) {
-                    translate += 100;
-                    a();
-                }
-            }
-        );
-    }
+    let tl = anime.timeline({
+        easing: 'easeOutExpo',
+        duration: 2500
+    });
 
-    a();
+    tl.add({
 
+    }).add({
+        targets: items,
+        translateX: '-100%'
+    }).add({
+        targets: sub,
+        opacity: 1,
+        duration: 10
+    }).add({
+        targets: layer1,
+        bottom: '10%',
+    })
 }
