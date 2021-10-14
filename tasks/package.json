@@ -54,6 +54,7 @@
     "webpack-stream": "^6.1.0"
   },
   "dependencies": {
-    "swiper": "^7.0.8"
+    "swiper": "^7.0.8",
+    "animejs": "^3.2.1"
   }
 }

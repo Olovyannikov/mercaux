@@ -113,7 +113,7 @@ const scripts = () => {
     return src(path.src.js)
         .pipe(
             webpackStream({
-                mode: isProd ? 'production' : 'development',
+                mode: 'production',
                 output: {
                     filename: "script.js",
                 },
